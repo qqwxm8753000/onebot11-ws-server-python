@@ -1,0 +1,9 @@
+[
+  {"keyword": "在吗", "reply": "在的在的，有事直说~"},
+  {"keyword": "你好", "reply": "你好呀！我是机器人 🤖"},
+  {"keyword": "早上好", "reply": "早上好！今天也要元气满满哦 ☀️"},
+  {"keyword": "晚安", "reply": "晚安，好梦 🌙"},
+  {"keyword": "谢谢", "reply": "不客气！有需要随时叫我~"},
+  {"keyword": "你是谁", "reply": "我是一个基于 OneBot 11 协议的机器人，由 Python 驱动。"},
+  {"keyword": "帮助", "reply": "可用命令：/echo 内容 → 复读；/ban → 禁言（需审批）；/leave → 退群（需审批）"}
+]

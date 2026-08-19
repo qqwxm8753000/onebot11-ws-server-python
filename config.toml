@@ -1,0 +1,69 @@
+# ============================================================
+# OneBot 11 Server 主配置文件
+# 修改后需重启服务（冷加载），部分项支持热重载
+# ============================================================
+
+[server]
+# WebSocket 监听地址，0.0.0.0 表示接受所有网卡连接
+host = "0.0.0.0"
+# WebSocket 监听端口
+port = 8765
+# 反向 WS 路径（LLOneBot 连接时使用的路径）
+path = "/"
+# 鉴权 Token，LLOneBot 端需填写相同的值
+access_token = "change-me-to-a-random-token"
+# 心跳超时时间（秒），超过此时间未收到心跳则断开
+heartbeat_timeout = 60
+# 单个 action 调用超时时间（秒）
+action_timeout = 10
+
+[logging]
+# 日志级别：DEBUG / INFO / WARNING / ERROR
+level = "INFO"
+# 日志输出目录
+log_dir = "logs"
+# 是否输出到控制台
+console = true
+# 单个日志文件最大大小（MB）
+max_size = 10
+# 日志文件保留数量
+retention = 30
+
+[admin]
+# 管理员 QQ 号列表，拥有敏感操作审批权限
+admin_qq = [10001, 10002]
+# 敏感操作确认超时时间（秒）
+confirm_timeout = 300
+
+[backup]
+# 备份目录
+backup_dir = "backups"
+# 退群时是否自动备份白名单和群列表
+auto_backup_on_leave = true
+# 备份文件保留数量
+backup_retention = 50
+
+[extension]
+# 插件目录（留空或相对路径时自动指向 onebot_server/extensions/）
+# 注意：extension 只能在包内 extensions/ 下编写，不能动主 WebSocket
+ext_dir = "extensions"
+# 是否启用热加载（文件变更自动重载）
+hot_reload = true
+# 热加载检测间隔（秒）
+watch_interval = 2
+# 插件文件后缀
+ext_suffix = ".py"
+
+[mixin]
+# Mixin 目录（留空或相对路径时自动指向 onebot_server/mixin/）
+# 内置 Mixin: log_mixin / backup_mixin / console_mixin / task_mixin
+# 自定义 Mixin 放在此目录下，命名需以 _mixin.py 结尾
+mixin_dir = "mixin"
+# 启动时自动加载的 Mixin 列表（按优先级从低到高排列）
+# 排在后面的 Mixin 优先级更高（后注册，先执行）
+auto_load = [
+    "log_mixin",
+    "backup_mixin",
+    "console_mixin",
+    "task_mixin",
+]
