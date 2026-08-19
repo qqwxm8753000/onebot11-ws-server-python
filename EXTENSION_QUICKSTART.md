@@ -4,7 +4,7 @@
 
 ### Step 1：复制模板
 ```bash
-cp extensions/_template.py extensions/my_bot.py
+cp extensions/_template.py onebot_server/extensions/my_bot.py
 ```
 
 ### Step 2：改类名 + name
