@@ -1,6 +1,0 @@
-2026-08-18 21:59:14 | ERROR    | onebot_server.extension_manager:hot_load:119 - [ExtMgr] 热加载失败: 文件不存在 F:\onebot11_server\onebot_server\extensions\yiyan.py
-{extra={}}
-2026-08-18 22:00:01 | ERROR    | onebot_server.extension_manager:_load_one:228 - [ExtMgr] 加载 yiyan 异常: cannot import name 'LogMixin' from 'onebot_server.mixin' (unknown location)
-{extra={}}
-2026-08-18 22:04:14 | ERROR    | onebot_server.extension_manager:_load_one:228 - [ExtMgr] 加载 yiyan 异常: cannot import name 'LogMixin' from 'onebot_server.mixin' (unknown location)
-{extra={}}
